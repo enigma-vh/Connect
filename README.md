@@ -6,4 +6,15 @@ This is a peer-to-peer file-sharing application. In this application, there is a
   * Search will ask a p2pservent which file it would like to discover and if it is found in the published list of files it will return the first filename found and the port number of the p2pservent it was originally from.
 
 ## Usage Explanation
-To use our application first use make on both the registry directory and servent directory. This will create executables in each directory. Note that if you want to run 2 clients, you need to put the servent files in two different folders. For the registry executable type “./server 8000” and for the servent executable type “./client 127.0.0.1 8000 (UDP_port_number).” Therefore, you can type in any UDP_port_number but two clients need to have two distinct UDP_port_number. For example, if the first client type “./client 127.0.0.1 8000 18000.” and the other should type “./client 127.0.0.1 8000 19000. From here the servent will ask the user if it would like to search for a file in the registry’s database, “collect.txt”.
+  * Use _make_ on both the registry abd servent directories. Note: if you want to run 2 clients, you need to put the servent files in two different folders
+  ```sh
+   $ make
+   ```
+  * For the registry executable
+  ```sh
+   $ ./server 8000
+   ```
+  * For the servent executable. Note: two clients need to have two distinct UDP_port_number
+  ```sh
+   $ ./client 127.0.0.1 8000 (UDP_port_number)
+   ```
