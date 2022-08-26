@@ -1,4 +1,4 @@
-# Pear-to-Pear file sharing application
+# Peer-to-Peer file sharing application
 ## Project Summary
 In this application, there is a p2pregistry - an intermediary program that handles the p2pservents which are both a client and a server. This application has three main operations: join, publish, and search. 
   * Join allows p2pservents to connect to the p2pregistry through a TCP socket and while it is connected the p2pservents will send “Hello” messages through a UDP socket every 60 seconds if not it is removed from the list of p2pservents. 
